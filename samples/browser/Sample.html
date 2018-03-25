@@ -42,7 +42,7 @@
                                 <span class="botInput">How are you? </span>
                         </div>
                     </div>
-                    <div class="last-sent client client-border delivered" data-message-id="1521962377550N7He9DK">
+                    <div class="last-sent client client-border delivered">
                         <span class="userInput">Hi, I have a question, I hope you can help me!</span>
                         
                     </div>
@@ -57,6 +57,9 @@
                             <span id="textarea-wrapper">
                                 <textarea id="message" placeholder="Write your request" name="message" maxlength="3000" style="height: 24px;"></textarea>
                                 <button href="#" id="mic-logo" style="display: block;">                    <span class="icon-clip" data-title="Upload files"><i class="fas fa-microphone"></i></span>               </button>
+                                <button id="sendMessageBtn">
+                                    Envoyer
+                                </button>
                             </span>
                        </span>
                     </div>
@@ -299,6 +302,12 @@
              e.preventDefault();
             $('#chatDisplay').removeClass('chatboxclass-active')
            })
+           $('#sendMessageBtn').click(function(e){
+                
+                phraseDiv.innerHTML += "<div class='operator operator-border'><div class='userInputContainer'>  <span class='userInput'>"+$('#message').val()+" </span></div></div>";
+                
+           });
+
             startBtn.addEventListener("click", function (e) {
                 /*if (key.value == "" || key.value == "YOUR_BING_SPEECH_API_KEY") {
                     alert("Please enter your Bing Speech subscription key!");
@@ -322,7 +331,6 @@
                     stopBtn.disabled = false;
                 }                
             });
-
             /*key.addEventListener("focus", function () {
                if (key.value == "YOUR_BING_SPEECH_API_KEY") {
                    key.value = "";
@@ -403,7 +411,7 @@
                     i++;
                 }
             }
-            phraseDiv.innerHTML += "<div class='operator operator-border'><div class='botInputContainer'>  <span class='userInput'>"+text+" </span></div></div>";
+            phraseDiv.innerHTML += "<div class='operator operator-border'><div class='userInputContainer'>  <span class='userInput'>"+text+" </span></div></div>";
         }
 
         function OnComplete() {
