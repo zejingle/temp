@@ -1,0 +1,165 @@
+
+<div id="wrapper" class="outline style-background-color style-border-color">	
+	<table id="content" cellspacing="0" cellpadding="0">	
+		<tbody>	
+			<tr id="title-container" class="style-background-color">	<td>	
+					<a id="title" href="#" class="title title-bg title-font style-text-shadow">		
+						<span id="mini-menu" class="animate" data-title="Options">
+							<span class="icon-menu"></span>
+						</span>		
+						<span id="close-chat" class="title-button" data-title="Stop chat">
+							<span class="icon-close"></span>
+						</span>		
+						<span id="minimize" class="title-button" data-title="Minimize window">
+							<span class="icon-minimize"></span>
+						</span>		
+						<span id="title-text">Chat with us!</span>	
+					</a>	
+				</td>	
+			</tr>	
+			<tr id="operators">	
+				<td class="deprecated-top-bg deprecated-top-font operators-bar style-background-color" style="display: none;">	
+					<div class="wrapper style-border-color logo">
+						
+					</div>	
+				</td>	
+			</tr>	
+			<tr id="body-container">	
+				<td>	
+					<div id="body" class="style-border-color" style="height: 564px;">		
+						<div class="top-shadow"></div>		
+						<div id="body-inner">			
+							<div class="view" id="view-loading" style="display: none;">				
+								<p id="loading-indicator">Please wait…</p>			
+							</div>			
+							<div class="view" id="view-offline-message-sent" style="display: none;">				
+								<p>Thank you! Your message has been sent. Our support team will contact you soon.</p>			
+							</div>			
+							<div class="view" id="view-connection-lost" style="display: none;">				
+								<p>Connection lost. Please check your internet connection and then try again.</p>			
+							</div>			
+							<div class="view" id="view-not-working-cookies-and-local-storage" style="display: none;">				
+								<p>Cookies are not enabled in your browser. Please enable cookies before starting a chat.</p>			
+							</div>			
+							<div class="view" id="view-confirm-closing" style="display: none;">				
+								<div id="confirm-closing">					
+									<p>Do you really want to leave current chat?</p>					
+									<p class="actions">						
+										<input type="button" id="leave-chat" value="Close the chat">						
+										<a href="" id="dont-leave-chat">cancel</a>					
+									</p>				
+								</div>			
+							</div>			
+							<div class="view" id="view-prechat-survey" style="display: block;">
+								<div class="form">
+									<form>
+										<div class="form_header" id="container_8">
+											<p>Hello! It's really great to see you here.
+												<br>Tell us just a few details about you and we are ready to go! ;)
+											</p>
+										</div>
+										<div id="container_1" field-id="151781714143308362">
+											<p>
+												<label for="name">Your name: 
+													<span class="asterisk">*</span>
+												</label>
+												<input type="text" name="name" id="name" class="text">
+											</p>
+										</div>
+										<div id="container_2" field-id="151781714143305269">
+											<p>
+												<label for="email">E-mail: 
+													<span class="asterisk">*</span>
+												</label>
+												<input type="text" name="email" id="email" class="text">
+											</p>
+										</div>
+										<div id="container_3" field-id="151781714143305593">
+											<p>
+												<label for="container_3_3">Your website address: 
+													<span class="asterisk">*</span>
+												</label>
+												<input type="text" name="container_3_3" id="container_3_3" class="text">
+											</p>
+										</div>
+										<div field-id="151781714143302636" id="container_4">
+											<p>
+												<label>What would you like to discuss? 
+													<span class="asterisk">*</span>
+												</label>
+												<select>
+													<option value="">-- choose --</option>
+													<option value="General use of LiveChat" id="container_4_4_0">General use of LiveChat
+													</option>
+													<option value="Billing" id="container_4_4_1">Billing</option>
+													<option value="Docs, API implementation" id="container_4_4_2">Docs, API implementation
+													</option>
+													<option value="Integrations" id="container_4_4_3">Integrations</option>
+													<option value="Other" id="container_4_4_4">Other</option>
+												</select>
+											</p>
+										</div>
+										<div id="container_9" class="submit">
+											<p>
+												<input type="submit" value="Start chat">
+												<span class="ajax-loader"></span>
+											</p>
+										</div>
+									</form>
+								</div>
+							</div>			
+							<div class="view" id="view-chat" style="display: none;">				
+								<div id="typing-indicator">
+									<span class="typing-author"></span>
+									<span class="typing-dots">...</span>
+								</div>			
+							</div>			
+							<div class="view" id="view-invitation" style="display: none;"></div>			
+							<div class="view" id="view-postchat-survey" style="display: none;"></div>			
+							<div class="view" id="view-offline-form" style="display: none;"></div>			
+							<div class="view" id="view-queued-form" style="display: none;"></div>			
+							<div class="view" id="view-information" style="display: none;"></div>		
+						</div>	
+					</div>		
+				</td>	
+			</tr>	
+			<tr id="textarea">	
+				<td class="deprecated-secondary-bg deprecated-secondary-font footer style-background-color textarea-inner-container">		
+					<span id="message-wrapper" class="message-wrapper">			
+						<a href="" class="btn-send">Send</a>			
+						<span id="textarea-wrapper" class="textarea-bg style-border-color">				
+							<textarea name="message" id="message" class="textarea-bg textarea-font" maxlength="3000"></textarea>				
+							<a href="#" id="send-file-clip" style="display: none;">					
+								<span class="icon-clip"></span>				
+							</a>				
+							<input type="file" name="files" id="input-file">				
+							<span id="message-placeholder" class="textarea-font">Type your message here and press Enter to send</span>			
+						</span>		
+					</span>	
+				</td>	
+			</tr>	
+			<tr id="survey-after-greeting" style="display: none;">	
+				<td class="submit style-border-color">		
+					<p><input type="button" value="Chat now"></p>	
+				</td>	
+			</tr>	
+			<tr id="footer">	
+				<td class="deprecated-secondary-bg deprecated-secondary-font footer style-background-color">	
+					<div id="social" style="display: block;">
+						<div class="twitter-follow-div" style="display: inline-block;">
+							<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.f47a2e0b4471326b6fa0f163bda46011.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=LiveChat&amp;show_count=false&amp;show_screen_name=false&amp;size=m&amp;time=1521948397495" style="position: static; visibility: visible; width: 64px; height: 20px;" data-screen-name="LiveChat">
+								
+							</iframe>
+						</div>
+						<iframe id="fb_like_iframe" src="https://www.facebook.com/plugins/like.php?ref=LiveChat&amp;href=http%3A%2F%2Fwww.facebook.com%2FLiveChat&amp;layout=button_count&amp;show_faces=false&amp;width=130&amp;action=like&amp;font=trebuchet+ms&amp;colorscheme=light&amp;height=20" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 130px; height: 20px; visibility: visible;" allowtransparency="false" onload="this.style.visibility='visible';">
+							
+						</iframe>
+					</div>	
+					<p id="powered">
+						<a href="https://www.livechatinc.com/powered-by-livechat/?partner=www.livechatinc.com&amp;utm_source=chat_window&amp;utm_medium=referral&amp;utm_campaign=www.livechatinc.com" target="_blank" class="deprecated-secondary-font footer style-background-color">Powered by LiveChat</a>
+					</p>	
+				</td>
+			</tr>	
+		</tbody>	
+	</table>
+</div>

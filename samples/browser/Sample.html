@@ -3,8 +3,63 @@
 <head>
     <title>Speech Sample</title>
     <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 </head>
 <body style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:13px;">
+    <section id="buttonSection" class="botbtnclass">
+        <button id="chatBotBtn"><i class="fab fa-android"></i></button>
+    </section>
+    <section id="chatDisplay" class="chatboxclass">
+        <div id="content">
+            <a id="title" href="#" class="title title-bg title-font style-text-shadow"> 
+                <span id="mini-menu" class="animate" data-title="Options">  
+                    <span class="icon-menu">  </span>
+                </span>        
+                <span id="close-chat" class="title-button" data-title="Stop chat">
+                    <span class="icon-close"></span>
+                </span>       
+                <span id="minimize" class="title-button" data-title="Minimize window">
+                    <span class="icon-minimize">
+                        
+                    </span>
+                </span>        
+            </a>
+            <div id="botTitle">
+                <span>S.R.A. - Smart Robot Agent</span>
+            </div>
+            <div id="container">
+                <div id='body-inner'>
+                <div id="theview" class="view">
+                    <div class="operator operator-border">
+                        <div class="botInputContainer">
+                                <span class="userInput">Hi </span>
+                        </div>
+                    </div>
+                    <div class="operator operator-border">
+                        <div class="botInputContainer">
+                                <span class="userInput">How are you? </span>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+
+                <div id="textInput">
+                    <div id="deprecatedTextInput">
+                        <span id="messageWrapper">
+                            <a href="" class="btn-send">send</a>
+                            <span id="textarea-wrapper">
+                                <textarea id="message" placeholder="Write your request" name="message" maxlength="3000" style="height: 24px;"></textarea>
+                                <button href="#" id="mic-logo" style="display: block;">                    <span class="icon-clip" data-title="Upload files"><i class="fas fa-microphone"></i></span>               </button>
+                            </span>
+                       </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div id="warning">
         <h1 style="font-weight:500;">Speech Recognition SDK not found.</h1>
         <h2 style="font-weight:500;">Please execute <code>npm run bundle</code> and reload.</h2>
@@ -18,58 +73,7 @@
                     <h2 style="font-weight:500;">Microsoft Cognitive Services</h2>
                 </td>
             </tr>
-           <!-- <tr>
-                <td align="right"><a href="https://www.microsoft.com/cognitive-services/en-us/sign-up" target="_blank">Subscription</a>:</td>
-                <td><input id="key" type="text" size="40" value="YOUR_BING_SPEECH_API_KEY"></td>
-            </tr>
-            <tr>
-                <td align="right">Language:</td>
-                <td align="left">
-                    <select id="languageOptions">
-                        <option value="ar-EG">Arabic - EG</option>
-                        <option value="ca-ES">Catalan - ES</option>
-                        <option value="da-DK">Danish - DK</option>
-                        <option value="da-DK">Danish - DK</option>
-                        <option value="de-DE">German - DE</option>
-                        <option value="en-AU">English - AU</option>
-                        <option value="en-CA">English - CA</option>
-                        <option value="en-GB">English - GB</option>
-                        <option value="en-IN">English - IN</option>
-                        <option value="en-NZ">English - NZ</option>
-                        <option value="zh-CN">Chinese - CN</option>
-                        <option value="en-US" selected="selected">English - US</option>
-                        <option value="es-ES">Spanish - ES</option>
-                        <option value="es-MX">Spanish - MX</option>
-                        <option value="fi-FI">Finnish - FI</option>
-                        <option value="fr-CA">French - CA</option>
-                        <option value="fr-FR">French - FR</option>
-                        <option value="hi-IN">Hindi - IN</option>
-                        <option value="it-IT">Italian - IT</option>
-                        <option value="ja-JP">Japanese - JP</option>
-                        <option value="ko-KR">Korean - KR</option>
-                        <option value="nb-NO">Norwegian - NO</option>
-                        <option value="nl-NL">Dutch - NL</option>
-                        <option value="pl-PL">Polish - PL</option>
-                        <option value="pt-BR">Portuguese - BR</option>
-                        <option value="pt-PT">Portuguese - PT</option>
-                        <option value="ru-RU">Russian - RU</option>
-                        <option value="sv-SE">Swedish - SE</option>
-                        <option value="zh-CN">Chinese - CN</option>
-                        <option value="zh-HK">Chinese - HK</option>
-                        <option value="zh-TW">Chinese - TW</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td align="right">Recognition Mode:</td>
-                <td align="left">
-                    <select id="recognitionMode">
-                        <option value="Interactive">Interactive</option>
-                        <option value="Conversation">Conversation</option>
-                        <option value="Dictation">Dictation</option>
-                    </select>
-                </td>
-            </tr>-->
+          
             <tr>
                 <td align="right">Format:</td>
                 <td align="left">
@@ -79,15 +83,7 @@
                     </select>
                 </td>
             </tr>
-            <!--<tr>
-                <td align="right">Input:</td>
-                <td align="left">
-                    <select id="inputSource">
-                        <option value="Mic" selected="selected">Microphone</option>
-                        <option value="File">Audio File</option>
-                    </select>
-                </td>
-            </tr>-->
+          
             <tr>
                 <td></td>
                 <td>
@@ -100,13 +96,10 @@
                 <td></td>
                 <td>
                     <table>
-                        <tr>
-                            <td>Results:</td>
-                            <td>Current hypothesis:</td>
-                        </tr>
+                    
                         <tr>
                             <td>
-                                <textarea id="phraseDiv" style="display: inline-block;width:500px;height:200px"></textarea>
+                                <div id="phraseDiv" style="display: inline-block;width:300px;height:500px;border-style: solid;"></div>
                             </td>
                             <td style="vertical-align: top">
                                 <span id="hypothesisDiv" style="width:200px;height:200px;display:block;"></span>
@@ -268,30 +261,40 @@
     <!-- Browser Hooks -->
     <script>
         var startBtn, stopBtn, hypothesisDiv, phraseDiv, statusDiv;
-        var key = {value: "cf2bdf33378044a9b477d41c5bb8256c"}, languageOptions = {value:"fr-FR"}, formatOptions, recognitionMode = {value: "Interactive"}, inputSource = {value:"Mic"}, filePicker;
+        var key = {value: "cf2bdf33378044a9b477d41c5bb8256c"}, languageOptions = {value:"fr-FR"}, formatOptions = {value:"Detailed"}, recognitionMode = {value: "Interactive"}, inputSource = {value:"Mic"}, filePicker,chatboxclass,buttonSection,chatBotBtn;
         var SDK;
         var recognizer;
         var previousSubscriptionKey;
 
         document.addEventListener("DOMContentLoaded", function () {
+            buttonSection = document.getElementById("buttonSection");
+            chatBotBtn = document.getElementById("chatBotBtn");
+            chatDisplay = document.getElementById("chatDisplay");
             createBtn = document.getElementById("createBtn");
-            startBtn = document.getElementById("startBtn");
+            startBtn = document.getElementById("mic-logo");
             stopBtn = document.getElementById("stopBtn");
-            phraseDiv = document.getElementById("phraseDiv");
+            phraseDiv = document.getElementById("theview");
             hypothesisDiv = document.getElementById("hypothesisDiv");
             statusDiv = document.getElementById("statusDiv");
             //key = document.getElementById("key");
             //key = {value: "cf2bdf33378044a9b477d41c5bb8256c"}
            // languageOptions = document.getElementById("languageOptions");
-            formatOptions = document.getElementById("formatOptions");
+            //formatOptions = document.getElementById("formatOptions");
            // inputSource = document.getElementById("inputSource");
            // recognitionMode = document.getElementById("recognitionMode");
             filePicker = document.getElementById('filePicker');
 
           //  languageOptions.addEventListener("change", Setup);
-            formatOptions.addEventListener("change", Setup);
+            //formatOptions.addEventListener("change", Setup);
            // recognitionMode.addEventListener("change", Setup);
-
+           $('#chatBotBtn').click(function(e){
+            e.preventDefault();
+            $('.chatboxclass').toggleClass('chatboxclass-active');
+           });
+           $("#title").click(function(e){
+             e.preventDefault();
+            $('#chatDisplay').removeClass('chatboxclass-active')
+           })
             startBtn.addEventListener("click", function (e) {
                 /*if (key.value == "" || key.value == "YOUR_BING_SPEECH_API_KEY") {
                     alert("Please enter your Bing Speech subscription key!");
@@ -381,7 +384,22 @@
             hypothesisDiv.innerHTML = "";
             var realJson = JSON.parse(json);
             var date = new Date();
-            phraseDiv.innerHTML += "ME [ " + date.getHours()  + ":" + date.getMinutes() +  "]" + realJson["DisplayText"] + "\n";
+            console.log(realJson);
+            var text = "";
+            if(realJson.NBest.length > 1 || realJson.NBest){
+                var holder,confidence=-1, len = realJson.NBest.length,i=0;
+                while(i<len){
+                    holder =realJson.NBest[i].Confidence;
+                    if(holder > confidence){
+                        confidence=holder;
+                        text = realJson.NBest[i].Display;
+                        console.log(text);
+                    }
+                    
+                    i++;
+                }
+            }
+            phraseDiv.innerHTML += "<div class='operator operator-border'><div class='botInputContainer'>  <span class='userInput'>"+text+" </span></div></div>";
         }
 
         function OnComplete() {
@@ -389,5 +407,8 @@
             stopBtn.disabled = true;
         }
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="/static/fontawesome/fontawesome-all.js"></script>
+    
 </body>
 </html>
