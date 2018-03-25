@@ -303,9 +303,10 @@
             $('#chatDisplay').removeClass('chatboxclass-active')
            })
            $('#sendMessageBtn').click(function(e){
-                
-                phraseDiv.innerHTML += "<div class='operator operator-border'><div class='userInputContainer'>  <span class='userInput'>"+$('#message').val()+" </span></div></div>";
-                
+                 if($("#message").val()!== ""){
+                 phraseDiv.innerHTML += "<div class='operator operator-border'><div class='userInputContainer'>  <span class='userInput'>"+$('#message').val()+" </span></div></div>";
+                    $("#message").val('');
+            }
            });
 
             startBtn.addEventListener("click", function (e) {
