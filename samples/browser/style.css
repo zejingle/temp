@@ -183,27 +183,13 @@
 
  }
  .userInput{
- 	text-align:left;
+
+
  }
  .botInput{
- 	text-align: right;
+ 	text-align: left;
  }
- .botInputContainer{
- 	    padding: 1em 1.25em;
-    max-width: 73%;
-    border-radius: 15px;
-        background:  #ffb3b3;
-    color: #5a6976;
-    margin-top: 1px;
-    display: inline-block;
-    margin-left: 0;
-        border: 0;
-    outline: 0;
-    font-style: inherit;
-    font-size: 100%;
-    font-family: inherit;
-    vertical-align: baseline;
- }
+
   .userInputContainer{
   	margin: 10px 0px;
   	float: right;
@@ -284,4 +270,49 @@ margin: 0;
 .chatboxclass-active{
 	visibility: visible;
 	opacity: 1;
+}
+ .botInputContainer{
+ 	    padding: 1em 1.25em;
+    max-width: 73%;
+    border-radius: 15px;
+        background:  #ffb3b3;
+    color: #5a6976;
+    margin-top: 1px;
+    display: inline-block;
+    margin-left: 0;
+        border: 0;
+    outline: 0;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+ }
+.client{
+
+	position: relative;
+    clear: both;
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 8px;
+        border-top: 0;
+    font-size: 14px;
+    color: #323232;
+      margin-top: 1px;
+    margin-right: 0;
+ 	text-align:right;
+ 	 float:right;   
+    clear: none;
+    position: relative;
+ 	padding: 1em 1.25em;
+    max-width: 73%;
+    border-radius: 15px;
+        background: #0075D9 !important;
+    display: inline-block;
+    text-align: left;
+ 	order-top-right-radius: 3px;
+    border-bottom-right-radius: 15px;
+        font-family: 'Noto Sans', sans-serif !important;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
 }
